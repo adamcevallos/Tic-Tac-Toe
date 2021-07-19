@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
+    <title>Tic-Tac-Toe</title>
+</head>
+
+<body>
+    <div id="container">
+        <select>
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="impossible">Impossible</option>
+            <option value="other-player">Other Player</option>
+        </select>
+        
+        <button class='player-btn active' type="button" id="x-btn">
+            <span class='left-span'>X</span> 
+            <span class='right-span'>&#8212</span>
+        </button>
+        <button class='player-btn' type="button" id="o-btn">
+            <span class='left-span'>O</span>
+            <span class="right-span">&#8212</span>
+        </button>
+        
+        <p id="game-text">Start game or select player</p>
+        
+        <div class="center">
+            <div id="board">
+                <div class='space inactive' id='space0'></div>
+                <div class='space inactive' id='space1'></div>
+                <div class='space inactive' id='space2'></div>
+                <div class='space inactive' id='space3'></div>
+                <div class='space inactive' id='space4'></div>
+                <div class='space inactive' id='space5'></div>
+                <div class='space inactive' id='space6'></div>
+                <div class='space inactive' id='space7'></div>
+                <div class='space inactive' id='space8'></div>
+            </div>
+        </div>
+                
+        <button id="restart-btn">Restart Game</button>
+    </div>
+
+    <script src="tictactoe.js"></script>
+</body>
+
+</html>

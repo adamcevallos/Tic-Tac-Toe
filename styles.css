@@ -1,0 +1,136 @@
+:root {
+    --xGray: rgb(82,82,82);
+    --oWhite: rgb(240, 239, 239);
+}
+
+#container {
+    position: relative;
+    border-radius: 10px;
+    border: 1px solid rgb(224, 224, 224);
+    top: 5em;
+    position: relative;
+    margin: 0 auto;
+    padding-bottom: 2.5em;
+    width: 55em;
+}
+
+select {
+    width: 8em;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: none;
+    margin: 1em;
+    display: block;
+    border-bottom: 3px solid rgb(56, 55, 55);
+    cursor: pointer;
+}
+
+.player-btn {
+    padding: 0 1em;
+    cursor: pointer;
+    background-color: white;
+    border: 1px solid rgb(226, 225, 225);
+    border-radius: 7px;
+    display: inline-block;
+    position: relative;
+    width: 13em;
+    height: 2.5em;
+}
+
+.active {
+    border-bottom: 2px solid rgb(7, 88, 88);
+    transform: translateY(-5%);
+    box-shadow: 0 4px 2px -2px rgb(156, 155, 155);
+}
+
+.left-span{float:left;}
+.right-span{float:right;}
+
+#x-btn {
+    left: 30%;
+}
+
+#o-btn {
+    left: 30%;
+}
+
+#game-text {
+    color: gray;
+    text-align: center;
+    margin-bottom: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+.center {
+    position: relative;
+    background-color: rgb(32, 175, 163);
+    height: 16em;
+    margin: 1em 0;
+}
+
+#board {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 15em;
+    width: 15em;
+    transform: translate(-50%, -50%);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+#space0, #space1, #space2 {border-bottom: 7px solid rgba(0,0,0,0.25);} 
+#space2, #space5, #space8 {border-left: 7px solid rgba(0,0,0,0.25);}
+#space6, #space7, #space8 {border-top: 7px solid rgba(0,0,0,0.25);}
+#space0, #space3, #space6 {border-right: 7px solid rgba(0,0,0,0.25);}
+
+.space {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    user-select: none;
+    font-size: 3.9em;
+}
+
+.inactive {color: transparent;}
+.x-off {animation: xOff 0.5s;}
+.x-on {
+    animation: xOn 0.5s;
+    color:var(--xGray)
+}
+.o-off {animation: oOn 0.5s;}
+.o-on {
+    color: var(--oWhite);
+    animation: oOff 0.5s;;
+}
+
+@keyframes xOn {
+    from {color: transparent;}
+    to {color: var(--xGray);}
+}
+@keyframes xOff {
+    from {color: var(--xGray);}
+    to {color: transparent;}
+}
+@keyframes oOff {
+    from {color: transparent;}
+    to {color: var(--oWhite);}
+}
+@keyframes oOn {
+    from {color: var(--oWhite);}
+    to {color: transparent;}
+}
+
+
+#restart-btn {
+    font-size: 1.2em;
+    outline: none;
+    position: absolute;
+    color: rgb(24, 134, 101);
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    left: 50%;
+    transform: translateX(-50%);
+}   
