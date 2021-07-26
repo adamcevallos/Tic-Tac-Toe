@@ -4,9 +4,10 @@
 }
 
 #container {
+    background-color: white;
     position: relative;
     border-radius: 10px;
-    border: 1px solid rgb(224, 224, 224);
+    border: 1px solid rgb(173, 171, 171);
     top: 5em;
     position: relative;
     margin: 0 auto;
@@ -34,8 +35,8 @@ select {
     border-radius: 7px;
     display: inline-block;
     position: relative;
-    width: 13em;
-    height: 2.5em;
+    width: 15em;
+    height: 3.5em;
 }
 
 .active {
@@ -48,11 +49,11 @@ select {
 .right-span{float:right;}
 
 #x-btn {
-    left: 30%;
+    left: 26.7%;
 }
 
 #o-btn {
-    left: 30%;
+    left: 26.7%;
 }
 
 #game-text {
@@ -86,51 +87,89 @@ select {
 #space0, #space3, #space6 {border-right: 7px solid rgba(0,0,0,0.25);}
 
 .space {
+    padding-top: 0.1em;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     user-select: none;
-    font-size: 3.9em;
+    font-size: 3.5em;
 }
 
+
 .inactive {color: transparent;}
-.x-off {animation: xOff 0.5s;}
+/* .x-off {animation: xOff 0.5s;} */
 .x-on {
     animation: xOn 0.5s;
     color:var(--xGray)
 }
-.o-off {animation: oOn 0.5s;}
+/* .o-off {animation: oOff 0.5s;} */
 .o-on {
     color: var(--oWhite);
-    animation: oOff 0.5s;;
+    animation: oOn 0.5s;;
 }
 
 @keyframes xOn {
-    from {color: transparent;}
-    to {color: var(--xGray);}
+    from {
+        color: transparent;
+        font-size: 3.9em;
+        padding-top: 0;
+    }
+    to {
+        color: var(--xGray);
+        font-size: 3.5em;
+        padding-top: 0.1em;
+    }
 }
-@keyframes xOff {
+/* @keyframes xOff {
     from {color: var(--xGray);}
     to {color: transparent;}
-}
-@keyframes oOff {
-    from {color: transparent;}
-    to {color: var(--oWhite);}
-}
+} */
 @keyframes oOn {
+    from {
+        color: transparent;
+        font-size: 3.9em;
+        padding-top: 0;
+    }
+    to {
+        color: var(--oWhite);
+        font-size: 3.5em;
+        padding-top: 0.1em;
+    }
+}
+/* @keyframes oOff {
     from {color: var(--oWhite);}
     to {color: transparent;}
-}
-
+} */
 
 #restart-btn {
-    font-size: 1.2em;
+    user-select: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1.8em;
     outline: none;
     position: absolute;
-    color: rgb(24, 134, 101);
+    bottom: 0.4em;
+    color: rgb(0, 0, 0);
     padding: 0;
     border: none;
     background-color: transparent;
     cursor: pointer;
     left: 50%;
     transform: translateX(-50%);
-}   
+}
+
+#win-text {
+    color: rgb(0, 0, 0);
+    display: none;
+    z-index: 1;
+    position: absolute;
+    left: 50%;
+    top: 1em;
+    transform: translate(-50%, -50%);
+    font-size: 6em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    user-select: none;
+}
+
+.blur {
+    filter: blur(3px);
+    pointer-events: none;
+}

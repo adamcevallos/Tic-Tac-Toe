@@ -10,21 +10,24 @@
 </head>
 
 <body>
+    <p id='win-text'>X wins</p>
+
     <div id="container">
-        <select>
+        <select id='difficulty-dropdown'>
             <option value="easy">Easy</option>
             <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
             <option value="impossible">Impossible</option>
-            <option value="other-player">Other Player</option>
+            <option value="two-players">Two Players</option>
         </select>
         
         <button class='player-btn active' type="button" id="x-btn">
             <span class='left-span'>X</span> 
-            <span class='right-span'>&#8212</span>
+            <span class='right-span' id='x-wins'>&#8212</span>
         </button>
         <button class='player-btn' type="button" id="o-btn">
             <span class='left-span'>O</span>
-            <span class="right-span">&#8212</span>
+            <span class="right-span" id='o-wins'>&#8212</span>
         </button>
         
         <p id="game-text">Start game or select player</p>
@@ -43,8 +46,9 @@
             </div>
         </div>
                 
-        <button id="restart-btn">Restart Game</button>
+        <button id="restart-btn">Restart</button>
     </div>
+
 
     <script src="tictactoe.js"></script>
 </body>
